@@ -10,11 +10,11 @@ let masterSongName = document.getElementById('masterSongName');
 let songItems = Array.from(document.getElementsByClassName('songItem'));
 
 let songs = [
-    {songName : "Nai Lagda", filePath: "Assest/songs/1.mp3", coverPath: "Assests/covers/1.jpg"},
-    {songName : "Befikar", filePath: "Assest/songs/2.mp3", coverPath: "Assests/covers/2.jpg"},
-    {songName : "Shiddat", filePath: "Assest/songs/3.mp3", coverPath: "Assests/covers/3.jpg"},
-    {songName : "Meherbaani", filePath: "Assest/songs/4.mp3", coverPath: "Assests/covers/4.jpg"},
-    {songName : "Jannat Ve", filePath: "Assest/songs/5.mp3", coverPath: "Assests/covers/5.jpg"},
+    {songName : "Nai Lagda", filePath: "Assests/songs/1.mp3", coverPath: "Assests/covers/1.jpg"},
+    {songName : "Befikar", filePath: "Assests/songs/2.mp3", coverPath: "Assests/covers/2.jpg"},
+    {songName : "Shiddat", filePath: "Assests/songs/3.mp3", coverPath: "Assests/covers/3.jpg"},
+    {songName : "Meherbaani", filePath: "Assests/songs/4.mp3", coverPath: "Assests/covers/4.jpg"},
+    {songName : "Jannat Ve", filePath: "Assests/songs/5.mp3", coverPath: "Assests/covers/5.jpg"},
 ]
 
 songItems.forEach((element, i)=> {
@@ -101,7 +101,7 @@ document.getElementById('next').addEventListener('click',()=> {
         songIndex += 1;
     }
     audioElement.src = `Assests/songs/${songIndex}.mp3`;
-    masterSongName.innerText = songs[songIndex].songName;
+    masterSongName.innerText = songs[songIndex-1].songName;
     audioElement.currentTime = 0;
     audioElement.play();
     masterPlay.classList.remove('fa-play-circle');
@@ -118,7 +118,7 @@ document.getElementById('previous').addEventListener('click',()=> {
         songIndex -= 1;
     }
     audioElement.src = `Assests/songs/${songIndex}.mp3`;
-    masterSongName.innerText = songs[songIndex].songName;
+    masterSongName.innerText = songs[songIndex-1].songName;
     audioElement.currentTime = 0;
     audioElement.play();
     masterPlay.classList.remove('fa-play-circle');
