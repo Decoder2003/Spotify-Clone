@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Spotify - Web Player</title>
+    <link rel="icon" type="image/x-icon" href="Assests/logo.png">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="Assests/logo.png" alt="Spotify">Spotify</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <div class="songList">
+            <h1>Best of Songs - Hindi Bollywood</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img class="songCover" src="Assests/covers/1.jpg" alt="1">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">04:47<i id="1" class="fas songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img class="songCover" src="Assests/covers/2.jpg" alt="2">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">04:24<i id="2" class="fas songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img class="songCover" src="Assests/covers/3.jpg" alt="3">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">03:51<i id="3" class="fas songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img class="songCover" src="Assests/covers/4.jpg" alt="4">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">04:03<i id="4" class="fas songItemPlay fa-play-circle"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img class="songCover" src="Assests/covers/5.jpg" alt="5">
+                    <span class="songName"></span>
+                    <span class="songlistplay"><span class="timestamp">03:32<i id="5" class="fas songItemPlay fa-play-circle"></i></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </div>
+
+    <div class="bottom">
+        <input type="range" name="range" id="myProgressBar" value="0" min="0" max="100">
+        <div class="icons">
+            <!-- fontawsome icons -->
+            <i class="fas fa-3x fa-step-backward" id="previous"></i>
+            <i class="fas fa-3x fa-play-circle" id="masterPlay"></i>
+            <i class="fas fa-3x fa-step-forward" id="next"></i>
+        </div>
+        <div class="songInfo">
+            <img src="Assests/playing.gif" width="42px" id="gif" alt=""> <span id="masterSongName">Nai Lagda</span>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a605615ef9.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
